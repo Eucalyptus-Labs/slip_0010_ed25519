@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.0 (2022-12-12)
+
+- Removed Async and Future
+
 ## 2.2.0 (2021-09-16)
 
 - Web support
