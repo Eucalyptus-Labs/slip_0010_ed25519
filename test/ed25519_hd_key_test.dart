@@ -1,18 +1,20 @@
 import 'dart:io';
 import 'dart:convert';
+import 'package:flutter_ed25519/ed25519_hd_key.dart';
 import "package:test/test.dart";
-import '../lib/ed25519_hd_key.dart';
 import 'package:convert/convert.dart';
+
+// Tests vectors from https://github.com/satoshilabs/slips/blob/master/slip-0010.md
 
 void main() {
   Map<String, dynamic> vectors = json.decode(
-      File('./test/test_vectors.json').readAsStringSync(encoding: utf8));
+      File('./test/test_vectors.json')
+          .readAsStringSync(encoding: utf8));
   final seeds = vectors.keys;
 
   group("Test vectors for ${seeds.first} seed", () {
     test("should have valid key and chainCode", () async {
-      var master =
-          await ED25519_HD_KEY.getMasterKeyFromSeed(hex.decode(seeds.first));
+      var master = ED25519_HD_KEY.getMasterKeyFromSeed(hex.decode(seeds.first));
       expect(
           hex.encode(master.key),
           equals(
@@ -24,9 +26,9 @@ void main() {
     });
     for (var el in vectors[seeds.first]) {
       test("should calculate valid data for '${el['path']}' path", () async {
-        KeyData data = await ED25519_HD_KEY.derivePath(
-            el['path'], hex.decode(seeds.first));
-        var pb = await ED25519_HD_KEY.getPublicKey(data.key);
+        KeyData data =
+            ED25519_HD_KEY.derivePath(el['path'], hex.decode(seeds.first));
+        var pb = ED25519_HD_KEY.getPublicKey(data.key);
         expect({
           "path": el['path'],
           "chainCode": hex.encode(data.chainCode),
@@ -39,8 +41,7 @@ void main() {
 
   group("Test vectors for ${seeds.last} seed", () {
     test("should have valid key and chainCode", () async {
-      var master =
-          await ED25519_HD_KEY.getMasterKeyFromSeed(hex.decode(seeds.last));
+      var master = ED25519_HD_KEY.getMasterKeyFromSeed(hex.decode(seeds.last));
       expect(
           hex.encode(master.key),
           equals(
@@ -53,8 +54,8 @@ void main() {
     for (var el in vectors[seeds.last]) {
       test("should calculate valid data for '${el['path']}' path", () async {
         KeyData data =
-            await ED25519_HD_KEY.derivePath(el['path'], hex.decode(seeds.last));
-        var pb = await ED25519_HD_KEY.getPublicKey(data.key);
+            ED25519_HD_KEY.derivePath(el['path'], hex.decode(seeds.last));
+        var pb = ED25519_HD_KEY.getPublicKey(data.key);
         expect({
           "path": el['path'],
           "chainCode": hex.encode(data.chainCode),
@@ -69,7 +70,7 @@ void main() {
     const masterSecret = "Bitcoin seed";
 
     test("Using '$masterSecret' key", () async {
-      var master = await ED25519_HD_KEY.getMasterKeyFromSeed(
+      var master = ED25519_HD_KEY.getMasterKeyFromSeed(
           hex.decode(
               "cd7875cc62c027a41e030f484fb17afe9737d0eb904f7642fc1a921d5ef94344461418dd53376ea31983a29ec119b209b844fe70f6e6c86673ce2a414236a198"),
           masterSecret: masterSecret);

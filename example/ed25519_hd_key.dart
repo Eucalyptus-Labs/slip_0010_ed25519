@@ -1,5 +1,5 @@
-import "package:ed25519_hd_key/ed25519_hd_key.dart";
 import 'package:convert/convert.dart';
+import 'package:flutter_ed25519/ed25519_hd_key.dart';
 
 void main() async {
   String hexSeed =
