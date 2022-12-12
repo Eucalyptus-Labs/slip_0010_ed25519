@@ -1,4 +1,4 @@
-name: flutter_ed25519
+name: slip_0010_ed25519
 version: 0.0.1
 
 description: BIP-0032 like derivation for ed25519 curve
@@ -8,9 +8,8 @@ environment:
   sdk: '>=2.18.4 <=3.0.0'
 
 dependencies:
-#  crypto: ^3.0.1
   pinenacl: ^0.5.1
 
 dev_dependencies:
-  test: ^1.16.8
+  test: ^1.22.1
 #  convert: ^3.0.0
