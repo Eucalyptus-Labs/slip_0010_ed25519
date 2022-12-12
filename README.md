@@ -1,10 +1,10 @@
 ed25519 HD Key
 =====
 
+Forked from <https://github.com/alepop/dart-ed25519-hd-key> with the async code removed.
+
 Key Derivation for `ed25519`
 ------------
-Ported from [ed25519-hd-key](https://github.com/alepop/ed25519-hd-key) js library
-
 [SLIP-0010](https://github.com/satoshilabs/slips/blob/master/slip-0010.md) - Specification
 
 Usage
