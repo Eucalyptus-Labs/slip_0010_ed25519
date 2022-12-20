@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:convert/convert.dart';
-import 'package:flutter_ed25519/ed25519_hd_key.dart';
+import 'package:slip_0010_ed25519/ed25519_hd_key.dart';
 import "package:test/test.dart";
 
 // Tests vectors from https://github.com/satoshilabs/slips/blob/master/slip-0010.md
