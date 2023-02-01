@@ -1,14 +1,12 @@
-ed25519 HD Key
-=====
+## ed25519 HD Key
 
 Forked from <https://github.com/alepop/dart-ed25519-hd-key> with the async code removed.
 
-Key Derivation for `ed25519`
-------------
+### Key Derivation for `ed25519`
+
 [SLIP-0010](https://github.com/satoshilabs/slips/blob/master/slip-0010.md) - Specification
 
-Usage
------
+### Usage
 
 ```dart
 import "package:ed25519_hd_key/ed25519_hd_key.dart";
@@ -29,8 +27,13 @@ void main() async {
 }
 ```
 
-References
-----------
+### Koala Wallet Users
+
+See `example/kadena_koala_derivation.dart` for an example on how to export your private key from your 24-word recovery phrase.
+
+
+### References
+
 [SLIP-0010](https://github.com/satoshilabs/slips/blob/master/slip-0010.md)
 
 [BIP-0032](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)
