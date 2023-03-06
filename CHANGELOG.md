@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.1.0 (2023-03-06)
+
+- renamed github repo to https://github.com/Eucalyptus-Labs/slip_0010_ed25519
+- published to pub.dev
+
 ## 3.0.0 (2022-12-12)
 
 - Removed Async and Future

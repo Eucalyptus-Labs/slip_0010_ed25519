@@ -1,4 +1,4 @@
-## ed25519 HD Key
+## Dart SLIP-0010 ed25519 HD Key
 
 Forked from <https://github.com/alepop/dart-ed25519-hd-key> with the async code removed.
 
