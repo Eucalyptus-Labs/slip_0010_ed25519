@@ -9,7 +9,7 @@ Forked from <https://github.com/alepop/dart-ed25519-hd-key> with the async code 
 ### Usage
 
 ```dart
-import "package:ed25519_hd_key/ed25519_hd_key.dart";
+import "package:ed25519_hd_key/slip_0010_ed25519.dart";
 import 'package:convert/convert.dart';
 
 void main() async {
