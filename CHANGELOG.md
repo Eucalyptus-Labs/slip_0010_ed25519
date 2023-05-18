@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.2.0 (2023-05-18)
+
+- updated dependencies
+- updated dart sdk to >3.0.0
+
 ## 3.1.0 (2023-03-06)
 
 - renamed github repo to https://github.com/Eucalyptus-Labs/slip_0010_ed25519

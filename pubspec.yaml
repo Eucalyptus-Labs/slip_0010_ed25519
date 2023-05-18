@@ -1,17 +1,17 @@
 name: slip_0010_ed25519
-version: 3.1.0
+version: 3.2.0
 
 description: BIP-0032 like derivation for ed25519 curve following SLIP-0010
 repository: https://github.com/Eucalyptus-Labs/slip_0010_ed25519
 
 environment:
-  sdk: '>=2.18.4 <=3.0.0'
+  sdk: '>=3.0.1 <=4.0.0'
 
 dependencies:
   pinenacl: ^0.5.1
-  crypto: ^3.0.2
+  crypto: ^3.0.3
 
 dev_dependencies:
-  test: ^1.22.2
+  test: ^1.24.3
 #  dependency_validator: ^3.2.2
   convert: ^3.1.1
